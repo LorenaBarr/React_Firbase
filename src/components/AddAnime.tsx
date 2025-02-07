@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { addAnime } from "../services/realtimeDatabaseService";
-
 const AddAnime: React.FC = () => {
   const [title, setTitle] = useState<string>("");
   const [status, setStatus] = useState<string>("visto");
-
   const handleAddAnime = async (e: React.FormEvent) => {
     e.preventDefault();
     if (title.trim()) {
@@ -13,7 +11,6 @@ const AddAnime: React.FC = () => {
       setStatus("visto");
     }
   };
-
   return (
     <div>
       <form onSubmit={handleAddAnime} className="bg-gray-800 p-4 rounded-lg">
@@ -31,8 +28,8 @@ const AddAnime: React.FC = () => {
           className="w-full p-2 mb-4 rounded bg-gray-700 text-light"
         >
           <option value="visto">Visto</option>
-          <option value="en progreso">En progreso</option>
-          <option value="pendiente">Pendiente</option>
+          <option value="En Progreso">En progreso</option>
+          <option value="Pendiente">Pendiente</option>
         </select>
         <button
           type="submit"
@@ -44,5 +41,4 @@ const AddAnime: React.FC = () => {
     </div>
   );
 };
-
 export default AddAnime;

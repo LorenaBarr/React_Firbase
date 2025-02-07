@@ -18,14 +18,15 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Mi Lista de Anime</h1>
-        <button 
+    <div className="min-h-screen bg-dark text-light">
+      {/* Encabezado */}
+      <div className="bg-dark flex justify-between items-center p-4 shadow-md">
+        <h1 className="text-primary text-2xl font-bold">AniMan</h1>
+        <button
           onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+          className="bg-primary hover:bg-accent text-light font-semibold px-4 py-2 rounded"
         >
-          Cerrar Sesión
+          Cerrar sesión
         </button>
       </div>
 
